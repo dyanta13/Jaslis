@@ -35,8 +35,7 @@ function chargeAPI($api_url, $server_key, $request_body){
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_POST => 1,
     CURLOPT_HEADER => 0,
-
-
+//Tambahkan header ke permintaan, termasuk otorisasi yang dihasilkan oleh kunci server
     CURLOPT_HTTPHEADER => array(
       'Content-Type: application/json',
       'Accept: application/json',
@@ -52,4 +51,3 @@ function chargeAPI($api_url, $server_key, $request_body){
   return $result;
 }
 
-?>
